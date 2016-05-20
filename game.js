@@ -6,7 +6,8 @@ game.state.add('play', playState);
 game.state.add('load', loadState);
 game.state.add('restart', restartState);
 
- var score=0;
+ var score = 0;
  var scoreText;
+ var hscore = localStorage.getItem("hscore");
 
 game.state.start('boot');

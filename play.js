@@ -1,11 +1,6 @@
 var playState = {
 
- 
-
 create: function() {
-//tworzenie obiektów
-
-//game.physics.startSystem(Phaser.Physics.ARCADE);
 
 score = 0;
 
@@ -67,7 +62,7 @@ player.animations.add('go', [0, 1, 2, 3], 15, true);
 },
 update: function() {
 
-  game.physics.arcade.overlap(player, p1, over1, null, this);
+        game.physics.arcade.overlap(player, p1, over1, null, this);
         game.physics.arcade.overlap(player, p2, over2, null, this);
         game.physics.arcade.overlap(player, p3, over3, null, this);
         game.physics.arcade.overlap(player, p4, over4, null, this);
@@ -78,7 +73,6 @@ update: function() {
 
         function over1(player,p1)
         {
-           
            game.state.start('restart');          
         }
 
@@ -120,7 +114,7 @@ update: function() {
 
 //pętla główna  gry
   cursors = game.input.keyboard.createCursorKeys();
-    player.animations.play('go');
+  player.animations.play('go');
   player.body.velocity.x  = 0;
         p1.body.velocity.x =-150;
         p2.body.velocity.x =-150;
@@ -178,7 +172,7 @@ update: function() {
 
   function onTap()
   {
-     //player.body.velocity.y  = -150;
+      player.body.velocity.y  = -150;
   }
 }
 
